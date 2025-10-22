@@ -1,0 +1,20 @@
+{
+  "name": "projet-demo-ci-cd",
+  "version": "1.0.0",
+  "description": "demo projet to test ci cd workflow",
+  "homepage": "https://github.com/consulting-school-portfolio/projet-demo-ci-cd#readme",
+  "bugs": {
+    "url": "https://github.com/consulting-school-portfolio/projet-demo-ci-cd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consulting-school-portfolio/projet-demo-ci-cd.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
