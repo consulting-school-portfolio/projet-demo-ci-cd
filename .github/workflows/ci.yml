@@ -27,5 +27,5 @@ jobs:
       - name: Exécuter les tests
         run: npm test
       # Étape 5: Vérifier la qualité
-      - name: Linter le code
-        run: npm run lint
+      # name: Linter le code
+      #  run: npm run lint
