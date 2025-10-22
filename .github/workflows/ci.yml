@@ -1,0 +1,31 @@
+# Nom du workflow
+name: CI - Tests Automatisés
+# Déclencheurs
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+# Jobs à exécuter
+jobs:
+  test:
+    # Runner Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # Étape 1: Récupérer le code
+      - name: Checkout du code
+        uses: actions/checkout@v3
+      # Étape 2: Installer Node.js
+      - name: Installer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      # Étape 3: Installer dépendances
+      - name: Installer les dépendances
+        run: npm ci
+      # Étape 4: Exécuter les tests
+      - name: Exécuter les tests
+        run: npm test
+      # Étape 5: Vérifier la qualité
+      - name: Linter le code
+        run: npm run lint
